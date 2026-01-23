@@ -1,0 +1,7 @@
+train: train/images
+val: train/images   # (can split later)
+
+nc: 2
+names:
+  0: garbage
+  1: pothole
