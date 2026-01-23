@@ -7,4 +7,4 @@ A hackathon project to automatically detect, report, and manage civic issues usi
 - Web Frontend
 - Mobile App
 - AI / ML
-
+ 
