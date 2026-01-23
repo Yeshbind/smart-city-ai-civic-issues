@@ -30,3 +30,6 @@ plt.imshow(img)
 plt.title("YOLO Detection Result")
 plt.axis("off")
 plt.show()   # 👈 stays open until YOU close it
+
+
+
