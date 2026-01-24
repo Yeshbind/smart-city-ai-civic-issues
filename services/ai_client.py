@@ -20,3 +20,6 @@ def call_ai(file: UploadFile, timeout: int = 10) -> dict:
     resp = requests.post(AI_URL, files=files, timeout=timeout)
     resp.raise_for_status()
     return resp.json()
+
+print("Calling AI at:", AI_URL)
+

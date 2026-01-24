@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException
 from auth import get_current_user
 from db import supabase
-from models import ReportCreate
+from schemas.report import ReportCreate
 
 router = APIRouter(prefix="/api")
 

@@ -4,3 +4,6 @@ python-multipart
 requests
 pydantic
 python-dotenv
+sqlalchemy
+passlib[bcrypt]
+bcrypt==4.1.3
