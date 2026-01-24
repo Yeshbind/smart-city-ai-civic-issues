@@ -24,11 +24,21 @@ export default function PreviewScreen({ route, navigation }) {
 
       const result = await response.json();
 
-      if (result.status === 'success') {
-        Alert.alert('Success', result.message || 'Violation detected');
-      } else {
-        Alert.alert('Result', result.message || 'No violation detected');
-      }
+      if (
+  result.status === 'auto_detected' &&
+  result.issue_type &&
+  result.issue_type !== 'none'
+) {
+  Alert.alert(
+    '🚨 Violation Detected',
+    `Type: ${result.issue_type}\nConfidence: ${Math.round(
+      result.confidence * 100
+    )}%`
+  );
+} else {
+  Alert.alert('✅ All Clear', 'No violation detected');
+}
+
 
       navigation.navigate('Home');
     } catch (error) {
